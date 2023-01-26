@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% block title %}Find Post Offices {% endblock %}
+{% block favicon %} <link rel="icon" type="image/x-icon" href="{{ url_for('static',filename='images/favicon.png') }}">{% endblock %}
+{% block externalCss %}
+    <link href="{{ url_for('static',filename='css/index.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+{% endblock %}
+{% block header %}
+    <img src = "{{ url_for('static',filename='images/logo.jpg') }}">
+{% endblock %}
+{% block body %}
+ <div class="nav-container">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark" id="navbar">
+        <div class="container-fluid" id="navbox">
+          <!-- <i class="fa fa-home"></i> -->
+          <a class="navbar-brand" href="#">
+            Postal Index Number
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active navbar-link"  href="/">Search By Location</a>
+              <a class="nav-link navbar-link" href="/search-by-pin">Search By PIN Code</a>
+              <a class="nav-link navbar-link" href="/search-by-post-office">Search By Post Office</a>
+              <a class="nav-link navbar-link" href="#">Search By Current Location</a>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="heading"><h5 class="display-6">Search By Location</h5></div>
+      <div class="form-container" style="display:flex; flex-direction:column;">
+        <div class="mb-3 row" style="display:flex; flex-direction:row;">
+            <label for="staticEmail" class="col-sm-2 col-form-label">State</label>
+            <div class="col-sm-10 select-menu">
+                <select class="form-select" aria-label="Default select example" id="states">
+                  <option selected value="0">Select State</option>
+                 </select>
+            </div>
+        </div>
+        <div class="mb-3 row" style="display:flex; flex-direction:row;">
+            <label for="staticEmail" class="col-sm-2 col-form-label" style="">District</label>
+            <div class="col-sm-10 select-menu">
+                <select class="form-select" aria-label="Default select example" id = "district">
+                    <option selected>Select District</option>
+                  </select>
+            </div>
+          </div>
+            
+          <div class="card" id="card">
+            <div class="card-body">
+               No records found 
+            </div>
+            
+          </div>
+          </div>
+        </div>
+        
+      </div>
+{% endblock %}
+{% block externalJs %} 
+      <script src = "{{url_for('static',filename='js/index.js')}}">
+{% endblock %}
+

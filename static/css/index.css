@@ -1,0 +1,65 @@
+.nav-container{
+    border : 2px solid rgb(201, 194, 194);
+    height:80vh;
+    margin-top: 7vh;
+    width:80vw;
+    margin : 10vh 12vw;
+    box-shadow: gray;
+    border-radius: 1em;
+    display:flex;
+    flex-direction: column;
+    border-top: none;
+
+}
+
+
+
+#navbar{
+    border-radius: 0.4em;
+}
+
+.form-container{
+    margin:5vh 17%;
+
+}
+
+.heading{
+    margin:1% 17%;
+    text-align: center;
+}
+
+.header{
+    width:80vw;
+    margin : auto 12vw;
+    height:11.5vh;
+
+}
+
+select[class="form-select"]{
+    width:70%;
+    height:7vh;
+}
+
+.row{
+    width:120%;
+}
+#card{
+    width:88%;
+    text-align: center;
+    margin-top:6.5vh;
+}
+
+
+#footer{
+    background-color: rgb(233, 227, 227);
+}
+
+div[class="navbar-nav"] a[href]:hover{
+    color:black;
+    background-color: white;
+    opacity: 0.6;
+}
+
+input[type='text']{
+    width:70%;
+}

@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block title %}Find Post Offices {% endblock %}
+{% block favicon %} <link rel="icon" type="image/x-icon" href="{{ url_for('static',filename='images/favicon.png') }}">{% endblock %}
+{% block externalCss %}
+    <link href="{{ url_for('static',filename='css/searchbypost.css') }}" rel="stylesheet">
+{% endblock %}
+{% block header %}
+    <img src = "{{ url_for('static',filename='images/logo.jpg') }}">
+{% endblock %}
+{% block body %}
+<div class="nav-container">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark" id="navbar">
+        <div class="container-fluid" id="navbox">
+          <!-- <i class="fa fa-home"></i> -->
+          <a class="navbar-brand" href="#">
+            Postal Index Number
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link navbar-link" aria-current="page" href="/">Search By Location</a>
+              <a class="nav-link navbar-link" href="/search-by-pin">Search By PIN Code</a>
+              <a class="nav-link navbar-link active" href="/search-by-post-office">Search By Post Office</a>
+              <a class="nav-link navbar-link" href="#">Search By Current Location</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="heading"><h5 class="display-6">Search Post Office Details By Branch Name</h5></div>
+      <div class="form-container">
+        <div class="row g-3 align-items-center" id="formrow">
+            <div class="col-auto">
+              <label for="inputPassword6" class="col-form-label">Post Office Name:</label>
+            </div>
+            <div class="col-auto" style="display:inline-block">
+              <input type="text" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+            </div>
+            <div class="col-auto">
+                <input type="button" class="btn btn-primary" value="Submit">
+            </div>
+            <div class="col-auto">
+                <input type="button" class="btn btn-danger" value=" Reset ">
+            </div>
+          </div>
+      </div>
+    </div>
+{% endblock %}
